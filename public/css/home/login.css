@@ -1,0 +1,61 @@
+.form {
+  max-width: 30%;
+  margin: auto;
+  margin-top: 3.2rem;
+  background-color: #b2f2bb;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  padding: 1.2rem 2.4rem;
+  margin-top: 18rem;
+}
+
+.labels {
+  display: block;
+  font-size: 2rem;
+  margin-bottom: 0.4rem;
+}
+
+.inputs {
+  width: 100%;
+  height: 4.8rem;
+  font-size: 2rem;
+  padding: 1.6rem;
+}
+
+.submit {
+  display: flex;
+  justify-content: space-between;
+  font-size: 2rem;
+  margin-top: 1.2rem;
+}
+
+.submit a:link,
+.submit:visited {
+  text-decoration: none;
+  align-self: center;
+}
+.submit a:hover,
+.submit:active {
+  color: red;
+}
+
+.sbm_btn:hover,
+.sbm_btn:active {
+  background-color: green;
+}
+
+.sbm_btn {
+  padding: 1rem 4.8rem;
+  font-weight: bold;
+  font-size: 1.6rem;
+  background-color: chartreuse;
+  border: none;
+  align-self: center;
+  cursor: pointer;
+  border: 1px solid cornsilk;
+}
+
+body {
+  background-color: #f4fce3;
+}

@@ -1,0 +1,182 @@
+/* default rules */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/* general rules */
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.search_btn {
+  font-size: 2rem;
+  background-color: rgb(143, 143, 199);
+  cursor: pointer;
+}
+
+.err {
+  border: solid 2px red;
+}
+
+.flash_div {
+  padding: 0.8rem;
+  font-size: 2rem;
+  max-width: 80rem;
+  text-align: center;
+  letter-spacing: 1;
+  letter-spacing: 1;
+  margin: 0 auto;
+}
+
+.error {
+  background-color: red;
+  color: #555;
+}
+.secc {
+  background-color: green;
+  color: #fff;
+}
+
+.form_err {
+  margin-top: 0.4rem;
+  font-size: 1.6rem;
+  color: red;
+  margin-left: 1.2rem;
+}
+
+.btns_div {
+  padding: 0 1.2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  text-decoration: none;
+
+  padding: 0.6rem 1.2rem;
+  font-size: 1.8rem;
+  color: #fff;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+/*  navbar design */
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  /* transition: all 1s; */
+}
+.navbar {
+  grid-row: 1 / -1;
+  background-color: #343a40;
+  height: 100vh;
+  padding: 4.8rem;
+  /* transition: all 1s; */
+  z-index: 1;
+}
+
+.arrow {
+  position: relative;
+  color: #fff;
+  left: 16rem;
+  bottom: 2rem;
+  font-size: 4rem;
+  border-radius: 50%;
+  background-color: #777;
+  color: #fff;
+  cursor: pointer;
+}
+
+.profil {
+  margin-bottom: 6.4rem;
+}
+
+.nav_links {
+  font-size: 2.4rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+.nav_link:link,
+.nav_link:visited {
+  color: #fff;
+  text-decoration: none;
+}
+.nav_link:hover,
+.nav_link:active {
+  color: #dee2e6;
+}
+
+.hiden {
+  display: none;
+}
+
+.expend {
+  grid-template-columns: 0 6fr;
+}
+
+.body_ctr {
+  padding: 2rem 4.8rem;
+}
+
+.employe_link {
+  text-decoration: none;
+  padding: 0.6rem 1.2rem;
+  font-weight: bold;
+  font-size: 1.8rem;
+  color: #444;
+}
+.edit_link {
+  background-color: greenyellow;
+  align-self: center;
+  justify-self: start;
+  margin-top: 1.2rem;
+}
+
+.scrole_div {
+  overflow-y: scroll;
+  height: 80vh;
+  margin-top: 1.6rem;
+}
+
+.dept_div {
+  max-width: 100%;
+  background-color: #f7f7f7;
+  padding: 1.6rem;
+  font-size: 2rem;
+}
+
+table {
+  width: 100%;
+  font-size: 1.6rem;
+  margin-top: 4.8rem;
+}
+thead {
+  background-color: beige;
+}
+tr {
+  height: 3.2rem;
+}
+th {
+  text-align: start;
+}
+td {
+  border-bottom: solid 1px #666;
+}
+
+.dpt {
+  background-color: #666;
+  font-size: 2.4rem;
+  color: #fff;
+}

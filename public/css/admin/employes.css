@@ -1,0 +1,62 @@
+.employe_container {
+  background-color: #f7f7f7;
+  margin-bottom: 2.4rem;
+  padding: 2.4rem 3.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+.titles {
+  display: grid;
+  grid-template-columns: 50px 130px 180px 100px 150px;
+  text-align: center;
+  padding: 1.6rem 2.4rem;
+  background-color: #f7f7f7;
+}
+
+.employe_infos {
+  display: flex;
+  gap: 4.8rem;
+}
+.employe_info {
+  list-style: none;
+  font-size: 2rem;
+}
+
+.links_div {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.view_link {
+  background-color: orange;
+}
+
+.delete_link {
+  background-color: red;
+}
+
+.add_btn {
+  background-color: blue;
+  padding: 0 3.2rem 0 3.2rem;
+  display: flex;
+  align-items: center;
+}
+
+.sort_btn {
+  background-color: #444;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.6rem;
+}
+
+.empl_btn {
+  background-color: #c11f94;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.6rem;
+  padding: 0.9;
+}
