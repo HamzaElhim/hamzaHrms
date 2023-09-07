@@ -1,4 +1,4 @@
-/* default rules */
+/* //default rules
 * {
   padding: 0;
   margin: 0;
@@ -10,7 +10,7 @@ html {
 }
 
 /* general rules */
-
+/* 
 .flex {
   display: flex;
   justify-content: space-between;
@@ -24,9 +24,9 @@ html {
 
 .err {
   border: solid 2px red;
-}
+} */ */
 
-.flash_div {
+/* .flash_div {
   padding: 0.8rem;
   font-size: 2rem;
   max-width: 80rem;
@@ -179,4 +179,4 @@ td {
   background-color: #666;
   font-size: 2.4rem;
   color: #fff;
-}
+} */

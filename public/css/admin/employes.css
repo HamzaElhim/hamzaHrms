@@ -1,4 +1,4 @@
-.employe_container {
+/* .employe_container {
   background-color: #f7f7f7;
   margin-bottom: 2.4rem;
   padding: 2.4rem 3.2rem;
@@ -7,7 +7,9 @@
   align-items: center;
 }
 
-
+html {
+  font-size: 65.5%;
+}
 
 .titles {
   display: grid;
@@ -59,4 +61,37 @@
   cursor: pointer;
   font-size: 1.6rem;
   padding: 0.9;
+} */
+
+.search-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+main {
+  grid-column: 2/-1;
+}
+
+.employe_div {
+  padding: 2.4rem;
+  background-color: #f7f7f7;
+}
+
+.head-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 1.6rem; */
+}
+
+.head-div a {
+  background-color: #4fb7fe !important;
+  color: #fff;
+}
+
+.head-div a:hover,
+.head-div a:active {
+  color: #fff;
 }
