@@ -386,3 +386,22 @@ thead {
 tbody tr td {
   height: 50px !important;
 }
+
+.search-btn {
+  height: 37px;
+  background-color: #4fb7fe;
+  color: #fff;
+}
+
+.add-btn,
+.search-btn {
+  transition: all 0.3s;
+}
+
+.search-btn:hover,
+.search-btn:active,
+.add-btn:hover,
+.add-btn:active {
+  background-color: #47a5e5 !important;
+  color: #fff;
+}

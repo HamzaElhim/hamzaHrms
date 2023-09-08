@@ -7,11 +7,19 @@
   <div class="employe_div ">
 
   <div class="head-div">
-    <a class="btn btn-default" href="#">
+    <a class="btn btn-default add-btn" href="<?php echo URLROOT.'admins/add/1';?>">
     add employe  
       <i class="fa fa-plus"></i>
     </a>
-    <label class="search-label">Search:<input type="search" class="form-control input-sm" placeholder="" aria-controls="editable_table"></label>
+
+    <div>
+
+        <form class="input-group"  action="<?php echo URLROOT.'admins/employes';?>" method="POST">
+            <label class="search-label"><input type="search" style="margin-bottom: 0;" class="form-control input-sm"  name="search" placeholder="search by name" value="<?PHP echo isset($data['value']) ? $data['value'] : ''?>" aria-controls="editable_table"></label>
+            <input type="submit" class="btn btn-default search-btn" value="Search" >
+        </form>
+    </div>
+    
   </div>
 
 
@@ -39,13 +47,13 @@
 				<td style="width: 120px;" data-th="Employee Id"><span class="bt-content"><?PHP echo $employe->role ?></span></td>
 				<td style="width: 120px;"  data-th="Employee Id"><span class="bt-content"><?PHP echo $employe->joined_date ?></span></td>
 				<td style="width:200px;" data-th="Full Detail"><span class="bt-content">
-                   <a style="padding:4px;margin-right:4px;font-size:14px;color:#fff"  class="btn btn-labeled btn-success" href="#">
+                   <a style="padding:4px;margin-right:4px;font-size:14px;color:#fff"  class="btn btn-labeled btn-success" href="<?php echo URLROOT.'admins/view/'.$employe->employe_id;?>">
                                 <span class="btn-label">
                                 <i class="fa fa-eye" ></i>
                                 </span>
                                 View
                     </a>
-                    <a style="padding:4px;font-size:14px;color:#fff""  class="btn btn-labeled btn-danger" href="#">
+                    <a style="padding:4px;font-size:14px;color:#fff""  class="btn btn-labeled btn-danger" href="<?php echo URLROOT.'admins/delete/'.$employe->employe_id;?>">
                                 <span class="btn-label">
                                 <i class="fa fa-trash"></i>
                                 </span>
@@ -62,9 +70,6 @@
     
 				</tbody>
 		</table>
-
-
-
 
   </div>
 
