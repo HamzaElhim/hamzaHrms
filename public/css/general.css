@@ -24,7 +24,8 @@ html {
 
 .err {
   border: solid 2px red;
-} */ */
+} */
+*/
 
 /* .flash_div {
   padding: 0.8rem;
@@ -157,26 +158,8 @@ html {
   font-size: 2rem;
 }
 
-table {
-  width: 100%;
-  font-size: 1.6rem;
-  margin-top: 4.8rem;
-}
-thead {
-  background-color: beige;
-}
-tr {
-  height: 3.2rem;
-}
-th {
-  text-align: start;
-}
-td {
-  border-bottom: solid 1px #666;
-}
-
 .dpt {
   background-color: #666;
   font-size: 2.4rem;
   color: #fff;
-} */
+}
