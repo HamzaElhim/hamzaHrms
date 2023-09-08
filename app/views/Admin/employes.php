@@ -1,56 +1,86 @@
 <?php require_once APPROOT.'views/inc/header.php';?>
-<?php require_once APPROOT.'views/inc/navbar.php';?>
-<div class="body_ctr">
-  <?PHP echo flash_msg()?>
-    <div class="btns_div">
-      <h1>total employes <span><?PHP echo $data['total_employes']?></span></h1>
+<?php require_once APPROOT.'views/inc/navigation.php';?>
+<!-- Main -->
+<main class="main-container">
 
-    <form class="flex" action="<?php echo URLROOT.'admins/employes';?>" method="POST">
-      <input type="text" name="search" placeholder="serch by name" value="<?PHP echo isset($data['value']) ? $data['value'] : ''?>">
-      <input class="search_btn" type="submit"  value="🔎"> 
-    </form>
+
+  <div class="employe_div ">
+
+  <div class="head-div">
+    <a class="btn btn-default add-btn" href="<?php echo URLROOT.'admins/add/1';?>">
+    add employe  
+      <i class="fa fa-plus"></i>
+    </a>
+
+    <div>
+
+        <form class="input-group"  action="<?php echo URLROOT.'admins/employes';?>" method="POST">
+            <label class="search-label"><input type="search" style="margin-bottom: 0;" class="form-control input-sm"  name="search" placeholder="search by name" value="<?PHP echo isset($data['value']) ? $data['value'] : ''?>" aria-controls="editable_table"></label>
+            <input type="submit" class="btn btn-default search-btn" value="Search" >
+        </form>
     </div>
-    <div class="scrole_div">
+    
+  </div>
+
 
     
-    <div class="titles">
-        <h1>#ID</h1>
-        <h1>fullName</h1>
-        <h1>Email</h1>
-        <h1>Role</h1>
-        <h1>JoinedDate</h1>
-    </div>
+  <table class="container" id="table">
+		<thead>
+			<tr>
+				<th style="text-transform: capitalize;">Profile Photo</th>
+				<th style="text-transform: capitalize;">Username</th>
+				<th style="text-transform: capitalize; text-align: center;">E-Mail</th>
+				<th style="text-transform: capitalize; text-align: center;">Position</th>
+				<th style="text-transform: capitalize; text-align: center;">Join Date</th>
+				<th style="text-transform: capitalize; text-align: center;">Action</th>
+			</tr>
+		</thead>
+		<tbody class="overflow-auto">
+            <?PHP foreach($data['employes'] as $employe){ ?>
+			<tr>
+				<td data-th="Profile Photo"><span class="bt-content"><img id="myImg" alt="Mark&nbsp;D&nbsp;Cooper" src="image/33615user.png" style="width: 50px;height: 50px;object-fit: cover;border-radius: 100%;border: 1px solid"></span></td>
+				
 
+				<td data-th="Name"><span class="bt-content"><?PHP echo $employe->first_name.' '.$employe->last_name ?></span></td>
+				<td data-th="Name"><span class="bt-content"><?PHP echo $employe->email ?></span></td>
 
-  
-  <?php foreach($data['employes'] as $employe){ ?>
+				<td style="width: 120px;" data-th="Employee Id"><span class="bt-content"><?PHP echo $employe->role ?></span></td>
+				<td style="width: 120px;"  data-th="Employee Id"><span class="bt-content"><?PHP echo $employe->joined_date ?></span></td>
+				<td style="width:200px;" data-th="Full Detail"><span class="bt-content">
+                   <a style="padding:4px;margin-right:4px;font-size:14px;color:#fff"  class="btn btn-labeled btn-success" href="<?php echo URLROOT.'admins/view/'.$employe->employe_id;?>">
+                                <span class="btn-label">
+                                <i class="fa fa-eye" ></i>
+                                </span>
+                                View
+                    </a>
+                    <a style="padding:4px;font-size:14px;color:#fff""  class="btn btn-labeled btn-danger" href="<?php echo URLROOT.'admins/delete/'.$employe->employe_id;?>">
+                                <span class="btn-label">
+                                <i class="fa fa-trash"></i>
+                                </span>
+                                Trash
+                        </a>
+                    </span>
+                    </td>
+			</tr>
 
+            <?php }?>
 
-    <div class="employe_container">
-          <ul class="employe_infos">
-            <li class="employe_info"><?php echo $employe->employe_id?></li>
-            <li class="employe_info"><?php echo $employe->first_name.' '.$employe->last_name?></li>
-            <li class="employe_info"><?php echo $employe->email?></li>
-            <li class="employe_info"><?php echo $employe->role?></li>
-            <li class="employe_info"><?php echo $employe->joined_date?></li>
-          </ul>
-        <div class="links_div">
-          <a class="employe_link view_link " href="<?php echo URLROOT.'admins/view/'.$employe->employe_id;?>">View</a>
-          <!-- <a class="employe_link edit_link  " href="#">Edit</a> -->
-          <a class="employe_link delete_link " href="<?php echo URLROOT.'admins/delete/'.$employe->employe_id;?>">Delete</a>
-        </div>
-      </div>
-      <?PHP };?>
-      </div>
-      <div class="btns_div">
-      <a class="btn add_btn" href="<?php echo URLROOT.'admins/add/1';?>" >Add +</a>
-      <a class="btn empl_btn <?Php echo empty($data['value']) ? 'hiden' :'' ?>" href="<?php echo URLROOT.'admins/employes';?>" >All Employes</a>
-      <!-- <button class="btn sort_btn">Sort by joined date</button> -->
-      <form class="form_4 <?Php echo empty($data['value']) ? '' :'hiden' ?>" action="http://localhost/hamzaHrms/public/admins/employes" method="POST">
+       
+
     
-    <input class="btn sort_btn" type="submit" name="Next" value="Sort By <?PHP echo sort_name();?>"> 
-    </form>
-    </div>
+				</tbody>
+		</table>
+
+  </div>
+
+    </main>
+
+
+
+
 </div>
+
+
+
 <link rel="stylesheet" href="<?php echo URLROOT.'css/admin/employes.css';?>">
 <?php require_once APPROOT.'views/inc/footer.php';?>

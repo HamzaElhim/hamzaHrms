@@ -20,7 +20,8 @@
       //  return all employes rows of the emploples table and in the chosen order whith option sort by full_name
       public function all_employes($column_order='first_name',$full_name=''){
         $full_name='%'.$full_name.'%';
-        $column_order= $column_order=='first_name' ? $column_order.' asc' : $column_order.' desc';
+
+        $column_order= $column_order=='first_name' ? $column_order.' asc' : $column_order.' DESC';
         $sql='SELECT * from employes 
               WHERE (
                       (role NOT LIKE "RH") AND ( (last_name LIKE :full_name)  OR (first_name  LIKE :full_name)  )
