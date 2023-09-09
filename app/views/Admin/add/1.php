@@ -14,7 +14,7 @@
 
 
 
-        <div class="col-12 col-lg-10 ml-auto mr-auto mb-4">
+        <div class="col-12 col-lg-9 ml-auto mr-auto mb-4">
             <div class="multisteps-form__progress">
               <button
                 class="multisteps-form__progress-btn js-active"
@@ -51,67 +51,146 @@
 
 
           <!-- this is for the from width -->
-        <div class="col-12 col-lg-10 m-auto"> 
+        <form class="col-12 col-lg-9 m-auto "> 
 
         <!-- <form class="multisteps-form__form"> -->
           <div
             class="multisteps-form__panel shadow p-4 rounded bg-white"
             data-animation="scaleIn"
           >
-            <h3 class="multisteps-form__title">Your User Info</h3>
+            <h3 class="multisteps-form__title" style="margin-bottom: 32px;">Personal Info</h3>
+  
             <div class="multisteps-form__content">
-              <div class="form-row mt-4">
-                <div class="col-12 col-sm-6">
-                  <input
-                    class="multisteps-form__input form-control"
-                    type="text"
-                    placeholder="First Name"
-                  />
-                </div>
-                <div class="col-12 col-sm-6 mt-4 mt-sm-0">
-                  <input
-                    class="multisteps-form__input form-control"
-                    type="text"
-                    placeholder="Last Name"
-                  />
-                </div>
-              </div>
-              <div class="form-row mt-4">
-                <div class="col-12 col-sm-6">
-                  <input
-                    class="multisteps-form__input form-control"
-                    type="text"
-                    placeholder="Login"
-                  />
-                </div>
-                <div class="col-12 col-sm-6 mt-4 mt-sm-0">
-                  <input
-                    class="multisteps-form__input form-control"
-                    type="email"
-                    placeholder="Email"
-                  />
-                </div>
-              </div>
-              <div class="form-row mt-4">
-                <div class="col-12 col-sm-6">
-                  <input
-                    class="multisteps-form__input form-control"
-                    type="password"
-                    placeholder="Password"
-                  />
-                </div>
-                <div class="col-12 col-sm-6 mt-4 mt-sm-0">
-                  <input
-                    class="multisteps-form__input form-control"
-                    type="password"
-                    placeholder="Repeat Password"
-                  />
-                </div>
-              </div>
+              
+        
+            <div class="form-group row">
+                        <div class="col-lg-3 col-xl-2 text-lg-right">
+                        <label for="username4" class="col-form-label">Birth DAte</label>
+                        </div>
+                        
+                        <div class="col-lg-8 col-xl-4 two_column_signup_margintop">
+                        <div class="input-group">
+                        <span class="input-group-addon">
+                        <i class="fa fa-calendar"></i>
+                        </span>
+                        <input type="date" id="email4" class="form-control" placeholder="E-mail">
+                        </div>
+                        
+                        </div>
+
+
+                        <div class="col-lg-3 col-xl-2 text-lg-right " ">
+                        <label  class="col-form-label">Gender</label>
+                        </div>
+                        <div class="col-lg-8 col-xl-4">
+                        <div class="input-group">
+                        <span class="input-group-addon">
+                        <i class="fa fa-users"></i>
+                        </span>
+                        <select class="form-control">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        </select>
+                        </div>
+                        </div>
+            </div>
+
+
+            <div class="form-group row">
+            <div class="col-lg-3 col-xl-2 text-lg-right " >
+                        <label  class="col-form-label">Marital Status</label>
+                        </div>
+                        <div class="col-lg-8 col-xl-4">
+                        <div class="input-group">
+                        <span class="input-group-addon">
+                        <i class="fa fa-users"></i>
+                        </span>
+                        <select  class="form-control">
+                        <option value="mariad">Mariad</option>
+                        <option value="single">Single</option>
+                        </select>
+                        </div>
+                        </div>
+
+                        <div class="col-lg-3 col-xl-2 two_column_label_margintop text-lg-right">
+                        <label  class="col-form-label">Address</label>
+                        </div>
+                        <div class="col-lg-8 col-xl-4 two_column_signup_margintop">
+                        <div class="input-group">
+                        <span class="input-group-addon">
+                        <i class="fa fa-map-marker"></i>
+                        </span>
+                        <input type="text"  class="form-control" placeholder="Address">
+                        </div>
+                        </div>
+               </div>
+
+
+            <div class="form-group row">
+            <div class="col-lg-3 col-xl-2 two_column_label_margintop text-lg-right">
+                        <label for="email4" class="col-form-label">Number</label>
+                        </div>
+                        <div class="col-lg-8 col-xl-4 two_column_signup_margintop">
+                        <div class="input-group">
+                        <span class="input-group-addon">
+                        <i class="fa fa-phone" ></i>
+                        </span>
+                        <input type="number" id="email4" class="form-control" placeholder="Phone Number">
+                        </div>
+                        </div>
+
+
+                        <div class="col-lg-3 col-xl-2 text-lg-right">
+                        <label  class="col-form-label">Nationality</label>
+                        </div>
+                        <div class="col-lg-8 col-xl-4">
+                        <div class="input-group">
+                        <span class="input-group-addon">
+                        <i class="fa fa-user"></i>
+                        </span>
+                        <input type="text"  class="form-control" placeholder="Nationality">
+                        </div>
+                        </div>
+
+                        
+          </div>
+
+          <div class="form-group row">
+            <div class="col-lg-3 col-xl-2 two_column_label_margintop text-lg-right">
+                        <label for="email4" class="col-form-label">Emergency</label>
+                        </div>
+                        <div class="col-lg-8 col-xl-4 two_column_signup_margintop">
+                        <div class="input-group">
+                        <span class="input-group-addon">
+                        <i class="fa fa-phone"></i>
+                        </span>
+                        <input type="number" id="email4" class="form-control" placeholder="Emergency Number">
+                        </div>
+                        </div>
+
+
+                        <div class="col-lg-3 col-xl-2 text-lg-right">
+                        <label  class="col-form-label">Relationship</label>
+                        </div>
+                        <div class="col-lg-8 col-xl-4">
+                        <div class="input-group">
+                        <span class="input-group-addon">
+                        <i class="fa fa-user"></i>
+                        </span>
+                        <input type="text"  class="form-control" placeholder="Emergency Relationship">
+                        </div>
+                        </div>
+
+                        
+          </div>
+
+
+        
+
               <div class="button-row d-flex mt-4">
                 <button
                   class="btn btn-primary ml-auto js-btn-next"
-                  type="button"
+                  type="submit"
                   title="Next"
                 >
                   Next
@@ -119,7 +198,7 @@
               </div>
             </div>
           </div>
-        </div> -->
+        </form>
 
 
 
