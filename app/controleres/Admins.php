@@ -35,7 +35,8 @@
       
       if($_SERVER['REQUEST_METHOD']=='POST'){
         $value=isset($_POST['search']) ? $_POST['search'] : '';
-        $employes=$this->getModel->all_employes((isset($_SESSION['sort']) ? $_SESSION['sort'] : ''),$value);
+        // $employes=$this->getModel->all_employes((isset($_SESSION['sort']) ? $_SESSION['sort'] : ''),$value);
+        $employes=$this->getModel->all_employes('first_name',$value);
         $data=[
           'employes'=>$employes,
           'total_employes'=>$total_employes,
