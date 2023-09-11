@@ -35,7 +35,7 @@
       
       if($_SERVER['REQUEST_METHOD']=='POST'){
         $value=isset($_POST['search']) ? $_POST['search'] : '';
-        $employes=$this->getModel->all_employes((isset($_SESSION['sort']) ? $_SESSION['sort'] : ''),$value);
+        $employes=$this->getModel->all_employes('first_name',$value);
         $data=[
           'employes'=>$employes,
           'total_employes'=>$total_employes,
@@ -147,6 +147,7 @@
 
           if($id==2){
 
+
             $data=[
               'job_title'=>$_POST['job_title'],
               'department'=>empty($_POST['department']) ? NULL :$_POST['department'],
@@ -154,8 +155,8 @@
               'salary'=>$_POST['salary'],
               'contract_type'=>empty($_POST['contract_type']) ? NULL :$_POST['contract_type'],
               'employment_status'=>empty($_POST['employment_status']) ? NULL :$_POST['employment_status'],
-              'contract_start'=> empty($_POST['contract_start']) ? date('y-m-d') : $_POST['contract_start'],
-              'contract_duration'=>empty($_POST['contract_duration']) ? 06 : $_POST['contract_duration'],
+              'contract_start'=> $_POST['contract_type']=='cdi' ? '-' : $_POST['contract_start'],
+              'contract_duration'=>$_POST['contract_type']=='cdi' ? '-' : $_POST['contract_duration'],
             ];
             
             $data_err=[
@@ -182,6 +183,9 @@
           //
                redirect('admins/view/'.$_SESSION['employe_id']);
               }else {
+                echo '<pre>';
+                print_r($data);
+                echo '<pre>';
                 $_SESSION['professional_info']=$data;
                   redirect('admins/add/3');
               }

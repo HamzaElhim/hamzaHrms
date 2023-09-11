@@ -45,13 +45,11 @@ html {
   background-color: green;
   color: #fff;
 }
+*/
 
-.form_err {
-  margin-top: 0.4rem;
-  font-size: 1.6rem;
-  color: red;
-  margin-left: 1.2rem;
-}
+
+
+/*
 
 .btns_div {
   padding: 0 1.2rem;
@@ -72,17 +70,15 @@ html {
 
 /*  navbar design */
 
-.container {
+/* .container {
   display: grid;
   grid-template-columns: 1fr 5fr;
-  /* transition: all 1s; */
-}
-.navbar {
+} */
+/* .navbar {
   grid-row: 1 / -1;
   background-color: #343a40;
   height: 100vh;
   padding: 4.8rem;
-  /* transition: all 1s; */
   z-index: 1;
 }
 
@@ -161,5 +157,27 @@ html {
 .dpt {
   background-color: #666;
   font-size: 2.4rem;
+  color: #fff;
+} */
+
+
+/* ===========   important styles ================== */
+.form_err {
+  margin-bottom: 0px !important;
+  font-size: 14px !important;
+  margin-top: 5px !important;
+  color: red !important;
+}
+
+.err {
+  border: solid 1px red !important;
+}
+
+.error {
+  background-color: red;
+  color: #555;
+}
+.secc {
+  background-color: green;
   color: #fff;
 }

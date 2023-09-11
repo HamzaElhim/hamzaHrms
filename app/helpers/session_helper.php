@@ -5,7 +5,7 @@
  function session_display($session_key,$sessoin_data='',$radio_value=''){
   if(empty($sessoin_data)) return '';
   if(!empty($radio_value) && $sessoin_data==$radio_value){
-      return 'checked';
+      return 'selected';
   }
   return $sessoin_data;
 }
