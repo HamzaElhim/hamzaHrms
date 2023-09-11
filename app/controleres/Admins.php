@@ -202,6 +202,10 @@
           }
 
           if($id==3){
+            // echo '<pre>';
+            // print_r($_FILES['image']);
+            // echo '<pre>';
+                              
             $data=[
               'first_name'=>trim($_POST['first_name']),
               'last_name'=>trim($_POST['last_name']),
@@ -209,7 +213,7 @@
               'password'=>trim($_POST['password']),
               'role'=>trim($_POST['role']),
               'confirm_pass'=>trim($_POST['confirm_pass']),
-              'image'=> empty($_POST['image']) ? 'no image' : $_POST['image'],
+              'image'=>isset($_FILES['image']) ? upload_img($_FILES['image']) : '',
             ];
             
             $data_err=[
@@ -221,6 +225,8 @@
               'confirm_pass_err'=>'',
               'image_err'=>'',
             ];
+
+            
 
             // fore empty feilds
             $data_err=check_emtpy($data,$data_err);

@@ -38,7 +38,7 @@
 		<tbody class="overflow-auto">
             <?PHP foreach($data['employes'] as $employe){ ?>
 			<tr>
-				<td data-th="Profile Photo"><span class="bt-content"><img id="myImg" alt="Mark&nbsp;D&nbsp;Cooper" src="image/33615user.png" style="width: 50px;height: 50px;object-fit: cover;border-radius: 100%;border: 1px solid"></span></td>
+				<td data-th="Profile Photo"><span class="bt-content"><img src="/hamzaHrms/app/controleres/images/<?PHP echo $employe->image ?>" style="width: 50px;height: 50px;object-fit: cover;border-radius: 100%;border: 1px solid" alt="Cinque Terre"></span></td>
 				
 
 				<td data-th="Name"><span class="bt-content"><?PHP echo $employe->first_name.' '.$employe->last_name ?></span></td>

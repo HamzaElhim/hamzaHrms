@@ -6,6 +6,7 @@
     <h1 class="title_4">More Information</h1>
     
     <a class="employe_link edit_link " href="<?php echo URLROOT.'admins/add/3';?>">Edit</a>
+    <img src="/hamzaHrms/app/controleres/images/<?PHP echo $data['more_info']->image ?>" style="width: 50px;height: 50px;object-fit: cover;border-radius: 100%;border: 1px solid" alt="Cinque Terre">
     <div class="info_ctr">
       <label class="info_label">First Name     :<?PHP echo  $data['more_info']->first_name ?></label>
     </div>

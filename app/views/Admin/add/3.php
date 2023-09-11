@@ -46,12 +46,13 @@
               </button>
             </div>
           </div>
+          
 
         <!-- <div class="row"> -->
 
 
           <!-- this is for the from width -->
-        <form class="col-12 col-lg-9 m-auto " action="<?PHP echo URLROOT.'admins/add/3'; ?>" method="POST"> 
+        <form class="col-12 col-lg-9 m-auto " action="<?PHP echo URLROOT.'admins/add/3'; ?>" method="POST" enctype="multipart/form-data"> 
 
         <!-- <form class="multisteps-form__form"> -->
           <div
@@ -169,9 +170,11 @@
                         </div>
                         <div class="col-lg-8 col-xl-4 two_column_signup_margintop">
             
-                        <input class="form-control" type="file" id="formFileDisabled"  />                       
+                        <input class="form-control" type="file"   name="image"
+                        
+                        />                       
                          
-      <p class="form_err"><?php echo empty($data) ? '' :  handel_error('error',$data['values']['role'],$data['errors']['role_err'])?></p>
+      <p class="form_err"><?php echo empty($data) ? '' :  handel_error('error',$data['values']['image'],$data['errors']['image_err'])?></p>
                         </div>
 
                         
