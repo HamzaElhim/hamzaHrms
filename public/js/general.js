@@ -28,7 +28,7 @@
 let $cnt_group = document.querySelector(".cnt-group");
 let $contract_type = document.getElementById("contract_type");
 
-$contract_type.addEventListener("click", function () {
+$contract_type?.addEventListener("click", function () {
   if ($contract_type.value == "cdd") {
     $cnt_group.classList.remove("hiden");
   }
@@ -36,3 +36,9 @@ $contract_type.addEventListener("click", function () {
     $cnt_group.classList.add("hiden");
   }
 });
+
+// for the flash message to desapear
+
+setTimeout(function () {
+  document.querySelector(".flash_div")?.classList.add("hide");
+}, 3000);

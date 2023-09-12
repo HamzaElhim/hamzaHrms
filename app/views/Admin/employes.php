@@ -2,6 +2,7 @@
 <?php require_once APPROOT.'views/inc/navigation.php';?>
 <!-- Main -->
 <main class="main-container">
+<?PHP flash_msg(); ?>
 
 
   <div class="employe_div ">

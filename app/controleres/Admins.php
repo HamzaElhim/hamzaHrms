@@ -77,7 +77,7 @@
           'personal_info'=>$personal,
           'professional_info'=>$professional,
         ];
-        $this->views('admin/view',$data);
+        $this->views('admin/add/4',$data);
     }
 
     // delete a employe
@@ -85,6 +85,8 @@
       $this->getModel->delete_employe($id,'personal_info');
       $this->getModel->delete_employe($id,'professional_info');
       $this->getModel->delete_employe($id,'employes');
+      $msg='An employe has been deleted';
+        flash_msg($msg,'success');
       redirect('admins/employes');
     }
 
@@ -132,7 +134,7 @@
               
             }else {
                   $msg='Some informations are Invalid ! please try again';
-                  flash_msg($msg,'error');
+                  flash_msg($msg,'danger');
               $data_1=[
                 'values'=>$data,
                 'errors'=>$data_err,
@@ -192,7 +194,7 @@
               
             }else {
               $msg='Some informations are Invalid ! please try again';
-                  flash_msg($msg,'error');
+                  flash_msg($msg,'danger');
               $data_2=[
                 'values'=>$data,
                 'errors'=>$data_err,
@@ -268,8 +270,8 @@
               }
               
             }else {
-                  $msg='Some informations are Invalid ! please try again';
-                  flash_msg($msg,'error');
+              $msg='Some informations are Invalid ! please try again';
+              flash_msg($msg,'danger');
               $data_3=[
                 'values'=>$data,
                 'errors'=>$data_err,
@@ -304,7 +306,7 @@
             unset($_SESSION['professional_info']);
             unset($_SESSION['more_info']);
             $msg='A new employe has been added';
-            flash_msg($msg,'secc');
+            flash_msg($msg,'success');
             redirect('admins/employes');
           }
         }   

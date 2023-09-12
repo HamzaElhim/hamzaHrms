@@ -7,14 +7,15 @@
 
 
 <main class="main-container">
+<?PHP flash_msg(); ?>
 
 
-<div class=" form_div">
+<div class=" form_div"   <?php echo isset($_SESSION['edit']) ? 'style="margin-top:50px;"' : '' ?>>
   
 
 
 
-        <div class="col-12 col-lg-9 ml-auto mr-auto mb-4">
+        <div class="col-12 col-lg-9 ml-auto mr-auto mb-4  <?php echo isset($_SESSION['edit']) ? 'hiden' : '' ?> ">
             <div class="multisteps-form__progress">
               <butaton
                 class="multisteps-form__progress-btn js-active"
@@ -189,7 +190,7 @@
                   type="submit"
                   title="Next"
                 >
-                  Next
+                  <?PHP echo change_btn('next') ?>
                 </button>
               </div>
             </div>
