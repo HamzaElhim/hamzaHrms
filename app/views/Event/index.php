@@ -22,7 +22,7 @@
                                 <h2 style="margin-bottom: 16px;"><?php echo $event->title ?></h2>
                                 <p><?PHP echo $event->description?>...</p>
                                 <!-- <a href="#" class="btn btn-default mt-20 mr-10"><i class="far fa-ticket-alt"></i> Buy Ticket</a> -->
-                                <a href="<?PHP echo URLROOT.'events/info/'.$event->id;?>" class="btn btn-default mt-20">Read More</a>
+                                <a href="<?PHP echo URLROOT.'events/info/'.$event->event_id;?>" class="btn btn-default mt-20">Read More</a>
                                 <div class="crical"><i class="fal fa-video"></i> </div>
                             </div>
 

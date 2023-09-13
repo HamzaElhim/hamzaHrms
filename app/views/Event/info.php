@@ -6,17 +6,32 @@
     />
 
 
-<main class="main-container">
+<main class="main-container" style="background-color: #f7f7f7;">
 
-<div class="event_container">
 
-  <h1 class="event_title"><?php echo $data['event']->title ?></h1>
-  <p class="event_body"><?php echo $data['event']->description;?></p>
-  <div class="flex">
-    <p class="event_info">To <?php echo '<strong>'.$data['event']->branch.'</strong> in '.$data['event']->location; ?> </p>
-    <p class="event_info"><?PHP echo $data['event']->date.' '.$data['event']->time ?></p>
+
+
+<div class="col-12 col-lg-12 m-auto" style="margin-top: 20px;">
+
+
+
+
+                            <div class="event-list-content fix" style="background-color: #fff;width:90%;margin:0 auto;margin-bottom: 10px;">
+                            <h3>TO : <?PHP echo $data['event']->branch ?></h3>
+                              <h2 style="margin-bottom: 16px;"><?php echo $data['event']->title ?></h2>
+                              <p><?PHP echo $data['event']->description;?>...</p>
+                              <ul class="loca" data-animation="fadeInUp animated" data-delay=".2s" style="animation-delay: 0.2s;" >
+                                  <li  style="margin-bottom: 12px;"><?PHP echo $data['event']->location; ?></li>
+                                  <li style="margin-bottom: 12px;"><?PHP echo $data['event']->date.' -- '.$data['event']->time.' AM'; ?></li>
+                              </ul>
+  
+                                <div class="crical"><i class="fal fa-video"></i> </div>
+                            </div>
+
+
+
+
   </div>
-</div>
 
 
 
@@ -26,4 +41,32 @@
 </main>
 </div>
 
+<link rel="stylesheet" href="<?PHP echo URLROOT.'css/event/index.css'; ?>">
 <?php require_once APPROOT.'views/inc/footer.php';?>
+
+<style>
+  h2 {
+    margin: 20px !important;
+    margin-bottom: 32px !important;
+    text-align: center !important;
+  }
+  p {
+    font-size: 20px !important;
+    width: 90% !important;
+    text-align: center  !important;
+    margin: 0 auto  !important;
+    margin-bottom: 64px  !important;
+  }
+
+   .loca{
+    display: flex;
+    justify-content: space-around;
+    gap: 150px;
+  }
+
+  h3 {
+    font-size: 20px !important;
+    color: #888 !important;
+  }
+</style>
+
