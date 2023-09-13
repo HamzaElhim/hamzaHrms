@@ -1,6 +1,13 @@
 <?php require_once APPROOT.'views/inc/header.php';?>
-<?php require_once APPROOT.'views/inc/navbar.php';?>
-<div class="body_ctr">
+<?php require_once APPROOT.'views/inc/navigation.php';?>
+<link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"
+    />
+
+
+<main class="main-container">
+  <?PHP flash_msg(); ?>
 
 
     <div class="scrole_div">
@@ -14,9 +21,9 @@
               <th>Department :<?PHP echo $dept->department ?></th>
               <th>&nbsp;</th>
               <th>&nbsp;</th>
-              <th>Salary :<?PHP echo $dept->total ?></th>
+              <th>TOTAL :<?PHP echo $dept->total.' MAD' ?></th>
             </tr>
-            <tr>
+            <tr class="tlt">
               <th>First Name</th>
             <th>Last Name</th>
             <th>Position</th>
@@ -30,7 +37,7 @@
           <td>    <?PHP echo $empl->first_name ?>   </td>
           <td>    <?PHP echo $empl->last_name ?>   </td>
           <td>    <?PHP echo $empl->role ?>   </td>
-          <td>    <?PHP echo $empl->salary ?>   </td>
+          <td>    <?PHP echo $empl->salary.' MAD'; ?>   </td>
           </tr>
           <?PHP }?>
           </tbody>

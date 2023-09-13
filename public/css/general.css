@@ -202,3 +202,6 @@ html {
 .hide {
   opacity: 0;
 }
+.hiden {
+  display: none;
+}

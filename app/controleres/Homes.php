@@ -34,7 +34,7 @@
       if(empty($data['email_err']) && empty($data['password_err'])){
         $row=$this->getModel->find_email($data['email']);
       if(!$row){
-        $data['email_err']='this email it is not exist';
+        $data['email_err']='this email it is not existed';
       }else {
         if($row->password != $data['password']){
           $data['password_err']='the password is invalid';
@@ -51,6 +51,8 @@
           redirect('Users');
         }
       }else {
+        $msg='Some informations are Invalid ! please try again';
+              flash_msg($msg,'danger');
         $this->views('home/index',$data);
       }
 

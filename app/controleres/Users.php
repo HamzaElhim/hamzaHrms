@@ -21,12 +21,13 @@
       $per=$this->getModel->employe_info('personal_info',$id);
       $pro=$this->getModel->employe_info('professional_info',$id);
       $mor=$this->getModel->employe_info('employes',$id);
+
       $data=[
-        'personal_info'=> $per,
-        'professional_info'=> $pro,
-        'more_info'=> $mor
+        'personal_info'=> to_assosiative_arr($per),
+        'professional_info'=> to_assosiative_arr($pro),
+        'more_info'=> to_assosiative_arr($mor),
       ];
-      $this->views('user/profile',$data);
+      $this->views('User/profile',$data);
     }
 
     public function logout(){
