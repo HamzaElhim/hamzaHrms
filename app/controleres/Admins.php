@@ -35,7 +35,8 @@
       
       if($_SERVER['REQUEST_METHOD']=='POST'){
         $value=isset($_POST['search']) ? $_POST['search'] : '';
-        // $employes=$this->getModel->all_employes((isset($_SESSION['sort']) ? $_SESSION['sort'] : ''),$value);
+
+
         $employes=$this->getModel->all_employes('first_name',$value);
         $data=[
           'employes'=>$employes,
@@ -78,7 +79,7 @@
           'personal_info'=>$personal,
           'professional_info'=>$professional,
         ];
-        $this->views('admin/view',$data);
+        $this->views('admin/add/4',$data);
     }
 
     // delete a employe
@@ -86,6 +87,8 @@
       $this->getModel->delete_employe($id,'personal_info');
       $this->getModel->delete_employe($id,'professional_info');
       $this->getModel->delete_employe($id,'employes');
+      $msg='An employe has been deleted';
+        flash_msg($msg,'success');
       redirect('admins/employes');
     }
 
@@ -133,7 +136,7 @@
               
             }else {
                   $msg='Some informations are Invalid ! please try again';
-                  flash_msg($msg,'error');
+                  flash_msg($msg,'danger');
               $data_1=[
                 'values'=>$data,
                 'errors'=>$data_err,
@@ -148,6 +151,7 @@
 
           if($id==2){
 
+
             $data=[
               'job_title'=>$_POST['job_title'],
               'department'=>empty($_POST['department']) ? NULL :$_POST['department'],
@@ -155,8 +159,8 @@
               'salary'=>$_POST['salary'],
               'contract_type'=>empty($_POST['contract_type']) ? NULL :$_POST['contract_type'],
               'employment_status'=>empty($_POST['employment_status']) ? NULL :$_POST['employment_status'],
-              'contract_start'=> empty($_POST['contract_start']) ? date('y-m-d') : $_POST['contract_start'],
-              'contract_duration'=>empty($_POST['contract_duration']) ? 06 : $_POST['contract_duration'],
+              'contract_start'=> $_POST['contract_type']=='cdi' ? '-' : $_POST['contract_start'],
+              'contract_duration'=>$_POST['contract_type']=='cdi' ? '-' : $_POST['contract_duration'],
             ];
             
             $data_err=[
@@ -183,13 +187,16 @@
           //
                redirect('admins/view/'.$_SESSION['employe_id']);
               }else {
+                echo '<pre>';
+                print_r($data);
+                echo '<pre>';
                 $_SESSION['professional_info']=$data;
                   redirect('admins/add/3');
               }
               
             }else {
               $msg='Some informations are Invalid ! please try again';
-                  flash_msg($msg,'error');
+                  flash_msg($msg,'danger');
               $data_2=[
                 'values'=>$data,
                 'errors'=>$data_err,
@@ -199,6 +206,10 @@
           }
 
           if($id==3){
+            // echo '<pre>';
+            // print_r($_FILES['image']);
+            // echo '<pre>';
+                              
             $data=[
               'first_name'=>trim($_POST['first_name']),
               'last_name'=>trim($_POST['last_name']),
@@ -206,7 +217,7 @@
               'password'=>trim($_POST['password']),
               'role'=>trim($_POST['role']),
               'confirm_pass'=>trim($_POST['confirm_pass']),
-              'image'=> empty($_POST['image']) ? 'no image' : $_POST['image'],
+              'image'=>isset($_FILES['image']) ? upload_img($_FILES['image']) : '',
             ];
             
             $data_err=[
@@ -218,6 +229,8 @@
               'confirm_pass_err'=>'',
               'image_err'=>'',
             ];
+
+            
 
             // fore empty feilds
             $data_err=check_emtpy($data,$data_err);
@@ -259,8 +272,8 @@
               }
               
             }else {
-                  $msg='Some informations are Invalid ! please try again';
-                  flash_msg($msg,'error');
+              $msg='Some informations are Invalid ! please try again';
+              flash_msg($msg,'danger');
               $data_3=[
                 'values'=>$data,
                 'errors'=>$data_err,
@@ -295,7 +308,7 @@
             unset($_SESSION['professional_info']);
             unset($_SESSION['more_info']);
             $msg='A new employe has been added';
-            flash_msg($msg,'secc');
+            flash_msg($msg,'success');
             redirect('admins/employes');
           }
         }   
