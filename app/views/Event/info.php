@@ -1,6 +1,12 @@
 <?php require_once APPROOT.'views/inc/header.php';?>
-<?php require_once APPROOT.'views/inc/navbar.php';?>
-<div class="body_ctr">
+<?php require_once APPROOT.'views/inc/'.($_SESSION['role']=='RH' ? 'navigation' : 'user_nav').'.php';?>
+<link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"
+    />
+
+
+<main class="main-container">
 
 <div class="event_container">
 
@@ -16,6 +22,8 @@
 
 
 
+
+</main>
 </div>
-<link rel="stylesheet" href="<?php echo URLROOT.'css/event/index.css';?>">
-<?php require_once APPROOT.'views/inc/footer.php'; ?>
+
+<?php require_once APPROOT.'views/inc/footer.php';?>

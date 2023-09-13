@@ -6,8 +6,9 @@
         </div>
               some msg 
         <h1></h1>
-        <a class="header-right" href="<?PHP echo URLROOT.'admins/logout';?>">
+        <a class="header-right" href="<?PHP echo URLROOT.'users/logout';?>">
           <span class="material-icons-outlined">account_circle</span>
+
         </a>
       </header>
       <!-- End Header -->
@@ -16,14 +17,14 @@
             <aside id="sidebar">
               <div class="sidebar-title">
                 <div class="sidebar-brand">
-                  <span class="material-icons-outlined ">inventory</span> MAPARCO
+                  <span class="material-icons-outlined ">inventory</span> <?PHP echo ucfirst($_SESSION['last_name'][0]).'.'.$_SESSION['first_name'] ?>
                 </div>
                 <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
               </div>
       
               <ul class="sidebar-list">
                 <li class="sidebar-list-item">
-                  <a href="<?PHP echo URLROOT.'admins'?>" >
+                  <a href="<?PHP echo URLROOT.'users'?>" >
                     <span class="material-icons-outlined">dashboard</span> Dashboard
                   </a>
                 </li>
@@ -34,18 +35,13 @@
                   </a>
                 </li>
                 <li class="sidebar-list-item">
-                  <a href="<?PHP echo URLROOT.'admins/employes'?>" >
-                    <span class="material-icons-outlined"> face</span> Employees
+                  <a href="<?PHP echo URLROOT.'users/profile'?>" >
+                    <span class="material-icons-outlined"> face</span> Profile
                   </a>
                 </li>
                 <li class="sidebar-list-item">
                   <a href="../Presence/Presence.html" >
                     <span class="material-icons-outlined">view_list  </span> Presence
-                  </a>
-                </li>
-                <li class="sidebar-list-item">
-                  <a href="<?PHP echo URLROOT.'admins/salary'?>" >
-                    <span class="material-icons-outlined">credit_score</span> salaries
                   </a>
                 </li>
                 <li class="sidebar-list-item">
@@ -60,7 +56,6 @@
                   Events
                   </a>
                   <div class="dropdown-menu" style="background-color:#21232d">
-                  <a class="dropdown-item" style="color:#FFF !important" href="<?PHP echo URLROOT.'events/add'; ?>">Add </a>
                     <a class="dropdown-item" style="color:#FFF !important" href="<?PHP echo URLROOT.'events/upcoming'; ?>">Upcoming </a>
                     <a class="dropdown-item" style="color:#FFF !important" href="<?PHP echo URLROOT.'events'; ?>">Historical </a>
                   </div>

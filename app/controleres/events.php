@@ -15,7 +15,6 @@
       $events=$this->getModel->all_events('historic',$for_user);
       $data=[
         'events'=>$events,
-        'title'=>'Historic'
       ];
 
       $this->views('event/index',$data);
@@ -60,9 +59,11 @@
         if(check_emtpy('',$data_err)){
           $this->getModel->add_event($data);
           $msg='A new event has been added';
-          flash_msg($msg,'secc');
+          flash_msg($msg,'success');
           redirect('events');
         }else{
+          $msg='Some informations are Invalid ! please try again';
+          flash_msg($msg,'danger');
           $data=[
             'v'=>$data,
             'e'=>$data_err

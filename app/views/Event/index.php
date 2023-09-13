@@ -1,30 +1,46 @@
 <?php require_once APPROOT.'views/inc/header.php';?>
-<?php require_once APPROOT.'views/inc/navbar.php';?>
-<div class="body_ctr">
-  <?PHP echo flash_msg(); ?>
+<?php require_once APPROOT.'views/inc/'.($_SESSION['role']=='RH' ? 'navigation' : 'user_nav').'.php';?>
+<link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"
+    />
 
-  <h1 class="type_title"><?PHP echo $data['title']?> Events</h1>
-  <?php //echo flash_msg(); ?>
-  <div class="flex <?PHP echo $_SESSION['role']=="RH" ? '' : 'hiden' ?>">
-      <a href="<?PHP echo URLROOT.'events/add'; ?>" class="add_event btn">Add New Event</a>
-      <a class="upcoming_btn btn <?php if($data['title']=='Upcoming')echo 'hiden';?>" href="<?PHP echo URLROOT.'events/upcoming'; ?>" >Upcoming Events</a>
+
+<main class="main-container">
+  <?PHP flash_msg(); ?>
+
+
+
+  <div class="col-lg-12" style="margin-top: 20px;">
+
+                    <?php foreach($data['events'] as $event){ ?>
+                            <div class="event-list-content fix" style="background-color: #fff;width:90%;margin:0 auto;margin-bottom: 10px;">
+                                <ul data-animation="fadeInUp animated" data-delay=".2s" style="animation-delay: 0.2s;" class="">
+                                    <li style="margin-bottom: 12px;"><?PHP echo $event->location ?></li>
+                                    <li style="margin-bottom: 12px;"><?PHP echo $event->date.' - '.$event->time.' AM'; ?></li>
+                                </ul>
+                                <h2 style="margin-bottom: 16px;"><?php echo $event->title ?></h2>
+                                <p><?PHP echo $event->description?>...</p>
+                                <!-- <a href="#" class="btn btn-default mt-20 mr-10"><i class="far fa-ticket-alt"></i> Buy Ticket</a> -->
+                                <a href="<?PHP echo URLROOT.'events/info/'.$event->id;?>" class="btn btn-default mt-20">Read More</a>
+                                <div class="crical"><i class="fal fa-video"></i> </div>
+                            </div>
+
+                   <?php } ?>
+
+
   </div>
-  <div class="scrole_div">
-<?php foreach($data['events'] as $event){ ?>
-  
-  
-<div class="event_container">
 
-  <h1 class="event_title"><?php echo $event->title ?></h1>
-  <div class="flex">
-    <p class="event_info">To <?php echo '<strong>'.$event->branch.'</strong> in '.$event->location; ?> </p>
-    <p class="event_info"><?PHP echo $event->date.' '.$event->time ?></p>
-  </div>
-  <a href="<?PHP echo URLROOT.'events/info/'.$event->event_id;?>" class="more_info" >more info</a>
-</div>
-<?php } ?>
+
+  
+
+
+
+
+
+
+  </main>
 </div>
 
-</div>
-<link rel="stylesheet" href="<?php echo URLROOT.'css/event/index.css';?>">
-<?php require_once APPROOT.'views/inc/footer.php'; ?>
+<link rel="stylesheet" href="<?PHP echo URLROOT.'css/event/index.css'?>">
+<?php require_once APPROOT.'views/inc/footer.php';?>

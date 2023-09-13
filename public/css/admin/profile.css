@@ -1,6 +1,3 @@
-/* body {
-  background: -webkit-linear-gradient(left, #3931af, #00c6ff);
-} */
 .main-container {
   grid-column: 2/-1;
   background-color: #f7f7f7;
@@ -237,4 +234,8 @@
 .edit-btn:active {
   background-color: #00ac79;
   color: #fff;
+}
+
+.main-container {
+  grid-column: 2/-1;
 }
