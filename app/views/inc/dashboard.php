@@ -16,7 +16,7 @@
                   </a>
                 </li>
                 <li class="sidebar-list-item">
-                  <a href="department" >
+                  <a href="department" class="card">
                     <span class="material-icons-outlined">
                       assured_workload </span> Departments
                   </a>
@@ -37,7 +37,7 @@
                   </a>
                 </li>
                 <li class="sidebar-list-item">
-                  <a href="../Requests/Requests.html" >
+                  <a href="../Requests/Requests.html"  >
                     <span class="material-icons-outlined"> note_alt</span> Requests 
                   </a>
                 </li>
@@ -49,5 +49,8 @@
               </ul>
             </aside>
 
-      
+ 
 
+
+
+    

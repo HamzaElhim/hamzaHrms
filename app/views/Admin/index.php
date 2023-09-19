@@ -11,23 +11,23 @@
           <a href="department" class="card">
             <div class="card-inner">
               <p class="text-primary">Departments</p>
-              <span class="material-icons-outlined text-blue">inventory_2</span>
+              <span class="material-icons-outlined text-blue"></span>
             </div>
-            <span class="text-primary font-weight-bold"></span>
+            <span class="text-primary font-weight-bold"><?PHP echo $data['departments'] ?></span>
           </a>
           <a href ="../Employees/staf.html" class="card">
             <div class="card-inner">
               <p class="text-primary">Employees</p>
               <span class="material-symbols-outlined text-orange">offline_pin</span>
             </div>
-            <span class="text-primary font-weight-bold"> </span>
+            <span class="text-primary font-weight-bold"> <?PHP echo $data['employees'] ?></span>
           </a>
           <a href ="../Presence/Presence.html"  class="card">
             <div class="card-inner">
               <p class="text-primary">Presents</p>
               <span class="material-symbols-outlined text-green">how_to_reg</span>
             </div>
-            <span class="text-primary font-weight-bold"> </span>
+            <span class="text-primary font-weight-bold"><?PHP echo $data['presents'] ?> </span>
           </a>
 
           <a href ="../Presence/Presence.html" class="card">
@@ -35,21 +35,21 @@
               <p class="text-primary">Absents</p>
               <span class="material-symbols-outlined text-red">unpublished</span>
             </div>
-            <span class="text-primary font-weight-bold"></span>
+            <span class="text-primary font-weight-bold"><?PHP echo $data['absents'] ?></span>
           </a>
           <a href ="../Requests/Requests.html" class="card">
             <div class="card-inner">
               <p class="text-primary">Requests</p>
               <span class="material-symbols-outlined text-blue1">notification_add</span>
             </div>
-            <span class="text-primary font-weight-bold"></span>
+            <span class="text-primary font-weight-bold"><?PHP echo $data['requests'] ?></span>
           </a>
           <a href ="../salaries/salaries.html" class="card">
             <div class="card-inner">
               <p class="text-primary">Salaries</p>
               <span class="material-symbols-outlined text-green1">payments</span>
             </div>
-            <span class="text-primary font-weight-bold">/79</span>
+            <span class="text-primary font-weight-bold">22</span>
           </a>
           <a href ="../Events/Events.html" class="card">
             <div class="card-inner">

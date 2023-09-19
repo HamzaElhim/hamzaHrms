@@ -2,18 +2,26 @@
   
    class Admins extends Controler {
     public $getModel;
+    public $adminModel;
 
 
     public function __construct()
     {
       $this->getModel=$this->models('employe');
+      $this->adminModel=$this->models('admin');
       if(!isset($_SESSION['id']))redirect('homes');
     }
 
     public function index(){
       $admin=$this->getModel->employe_info('employes',$_SESSION['id']);
+
       $data=[
         'admin'=>$admin,
+        'departments'=>$this->adminModel->getdept() ,
+        'employees'=>$this->adminModel->getUsers() ,
+        'presents'=>$this->adminModel->getPrs() ,
+        'requests'=> $this->adminModel->getReqts(), 
+        'absents' => $this->adminModel->getAbs()
       ];
       $this->views('admin/index',$data);
     }

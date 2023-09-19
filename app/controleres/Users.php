@@ -2,17 +2,22 @@
   
    class Users extends Controler {
     public $getModel;
+    public $userModel;
     public function __construct()
     {
       $this->getModel=$this->models('employe');
+      $this->userModel=$this->models('user');
       if(!isset($_SESSION['id']))redirect('homes');
     }
 
     public function index(){
       $user=$this->getModel->employe_info('employes',$_SESSION['id']);
       $data=[
-        'user'=>$user
+        'user'=>$user,
+        'attendance'=>$this->userModel->getAttendance($_SESSION['id']) ,
+        'NbrRequest'=>$this->userModel->getRequest($_SESSION['id']) ,
       ];
+
       $this->views('user/index',$data);
     }
 
