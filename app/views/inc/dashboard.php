@@ -16,7 +16,7 @@
                   </a>
                 </li>
                 <li class="sidebar-list-item">
-                  <a href="department" class="card">
+                  <a href="<?PHP echo URLROOT.'Depart/dashboard';?>" class="card">
                     <span class="material-icons-outlined">
                       assured_workload </span> Departments
                   </a>
@@ -27,7 +27,7 @@
                   </a>
                 </li>
                 <li class="sidebar-list-item">
-                  <a href="../Presence/Presence.html" >
+                  <a href="<?PHP echo URLROOT.'Presences/presence';?>" >
                     <span class="material-icons-outlined">view_list  </span> Presence
                   </a>
                 </li>

@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="<?PHP echo URLROOT.'css/dashboard.css'; ?>">
+<link rel="stylesheet" href="<?PHP echo URLROOT.'css/navigation.css'; ?>">
 <div class="grid-container">
       <header class="header">
         <div class="menu-icon" onclick="openSidebar()">
@@ -16,7 +17,7 @@
             <aside id="sidebar">
               <div class="sidebar-title">
                 <div class="sidebar-brand">
-                  <span class="material-icons-outlined ">inventory</span> MAPARCO
+                  <span class="material-icons-outlined ">inventory</span> S.A.R.B
                 </div>
                 <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
               </div>
@@ -28,7 +29,7 @@
                   </a>
                 </li>
                 <li class="sidebar-list-item">
-                  <a href="department" >
+                  <a href="<?PHP echo URLROOT.'Depart/dashboard';?>" >
                     <span class="material-icons-outlined">
                       assured_workload </span> Departments
                   </a>
@@ -39,7 +40,7 @@
                   </a>
                 </li>
                 <li class="sidebar-list-item">
-                  <a href="../Presence/Presence.html" >
+                  <a href="<?PHP echo URLROOT.'Presences/presence';?>" >
                     <span class="material-icons-outlined">view_list  </span> Presence
                   </a>
                 </li>
@@ -49,7 +50,7 @@
                   </a>
                 </li>
                 <li class="sidebar-list-item">
-                  <a href="../Requests/Requests.html" >
+                  <a href="<?PHP echo URLROOT.'Requests/Request';?>" >
                     <span class="material-icons-outlined"> note_alt</span> Requests 
                   </a>
                 </li>

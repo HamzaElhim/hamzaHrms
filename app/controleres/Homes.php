@@ -45,7 +45,6 @@
 
       if(empty($data['email_err']) && empty($data['password_err'])){
         $this->createUserSession($row);
-        //  print_r($row->role);
         if($row->role=='RH'){
           redirect('Admins');
         }else {

@@ -28,24 +28,14 @@
                     <span class="material-icons-outlined">dashboard</span> Dashboard
                   </a>
                 </li>
-                <li class="sidebar-list-item">
-                  <a href="department" >
-                    <span class="material-icons-outlined">
-                      assured_workload </span> Departments
-                  </a>
-                </li>
+          
                 <li class="sidebar-list-item">
                   <a href="<?PHP echo URLROOT.'users/profile'?>" >
                     <span class="material-icons-outlined"> face</span> Profile
                   </a>
                 </li>
                 <li class="sidebar-list-item">
-                  <a href="../Presence/Presence.html" >
-                    <span class="material-icons-outlined">view_list  </span> Presence
-                  </a>
-                </li>
-                <li class="sidebar-list-item">
-                  <a href="../Requests/Requests.html" >
+                  <a href="<?PHP echo URLROOT.'Requests/RequestUser';?>" >
                     <span class="material-icons-outlined"> note_alt</span> Requests 
                   </a>
                 </li>
