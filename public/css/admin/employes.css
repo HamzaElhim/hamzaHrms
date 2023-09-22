@@ -172,10 +172,6 @@ table th {
   text-transform: uppercase;
 }
 
-table tr td {
-  background: #edf8ff;
-  color: #424242;
-}
 
 table tr:nth-of-type(2n + 2) td {
   background: #ffffff;
@@ -308,7 +304,9 @@ table.two-axis tr td:first-of-type {
 }
 
 table {
-  width: 100%;
+  width: 100%;  
+  border-radius: 50%;
+
 }
 .table {
   margin: 30px 0;
@@ -414,8 +412,11 @@ table {
 }
 
 .tlt th {
-  background-color: #64656c !important;
+  background-color: #ddd !important;
+  color: black ;
 }
 .dpt th {
-  background-color: #4d4f57 !important;
+  background-color: #ddd !important;
+  color: black ;
+
 }

@@ -1,5 +1,5 @@
 <?php require_once '../app/views/Inc/header.php'; ?>
-<?php require_once APPROOT.'views/inc/user_nav.php'; ?>
+<?php require_once APPROOT.'views/inc/navigation.php'; ?>
 
 
       <main class="main-container">

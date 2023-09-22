@@ -108,7 +108,7 @@
                         <i class="fa fa-users"></i>
                         </span>
                         <select  class="form-control" name="marital">
-                        <option value="mariad" <?php echo empty($data) ? session_display('personal_info',!isset($_SESSION['personal_info']) ? '' : $_SESSION['personal_info']['marital'],'maraid') :  handel_error('radio',$data['values']['marital'],$data['errors']['marital_err'],'maraid')?>>Mariad</option>
+                        <option value="married" <?php echo empty($data) ? session_display('personal_info',!isset($_SESSION['personal_info']) ? '' : $_SESSION['personal_info']['marital'],'married') :  handel_error('radio',$data['values']['marital'],$data['errors']['marital_err'],'married')?>>married</option>
                         <option value="single" <?php echo empty($data) ? session_display('personal_info',!isset($_SESSION['personal_info']) ? '' : $_SESSION['personal_info']['marital'],'single') :  handel_error('radio',$data['values']['marital'],$data['errors']['marital_err'],'single')?>>Single</option>
                         </select>
                         </div>
@@ -139,7 +139,7 @@
                         <span class="input-group-addon">
                         <i class="fa fa-phone" ></i>
                         </span>
-                        <input type="number" name="phone_number" id="email4" class="form-control" placeholder="Phone Number"  value="<?php echo empty($data) ? session_display('personal_info',!isset($_SESSION['personal_info']) ? '' : $_SESSION['personal_info']['phone_number']) :  handel_error('value',$data['values']['phone_number'],$data['errors']['phone_number_err'])?>">
+                        <input type="tel" name="phone_number" id="email4" class="form-control" placeholder="Phone Number"  value="<?php echo empty($data) ? session_display('personal_info',!isset($_SESSION['personal_info']) ? '' : $_SESSION['personal_info']['phone_number']) :  handel_error('value',$data['values']['phone_number'],$data['errors']['phone_number_err'])?>">
                         </div>
                          
       <p class="form_err"><?php echo empty($data) ? '' :  handel_error('error',$data['values']['phone_number'],$data['errors']['phone_number_err'])?></p>
@@ -172,7 +172,7 @@
                         <span class="input-group-addon">
                         <i class="fa fa-phone"></i>
                         </span>
-                        <input type="number" name="emergency_number"  class="form-control" placeholder="Emergency Number" value="<?php echo empty($data) ? session_display('personal_info',!isset($_SESSION['personal_info']) ? '' : $_SESSION['personal_info']['emergency_number']) :  handel_error('value',$data['values']['emergency_number'],$data['errors']['emergency_number_err'])?>">
+                        <input type="tel" name="emergency_number"  class="form-control" placeholder="Emergency Number" value="<?php echo empty($data) ? session_display('personal_info',!isset($_SESSION['personal_info']) ? '' : $_SESSION['personal_info']['emergency_number']) :  handel_error('value',$data['values']['emergency_number'],$data['errors']['emergency_number_err'])?>">
                         </div>
                          
       <p class="form_err"><?php echo empty($data) ? '' :  handel_error('error',$data['values']['emergency_number'],$data['errors']['emergency_number_err'])?></p>

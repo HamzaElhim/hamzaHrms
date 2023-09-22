@@ -22,12 +22,12 @@
 
       
       if(empty($data['email'])){
-        $data['email_err']='please enter your email';
+        $data['email_err']='Please Enter Your Email';
       }
 
 
       if(empty($data['password'])){
-        $data['password_err']='please enter your password';
+        $data['password_err']='Please Enter Your Password';
       }
 
       // check for login

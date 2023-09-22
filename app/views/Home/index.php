@@ -12,7 +12,7 @@
   left: 48%;
   top: 48%;
   background-position: center;
-z-index: 999999">
+  z-index: 999999">
 <img src="img/loader.gif" style="width: 40px; display: none;" alt="loading...">
 </div>
 </div>
@@ -21,12 +21,13 @@ z-index: 999999">
 <div class="col-lg-12 col-md-12 col-sm-12 login_top_bottom">
 <div class="row">
 <div class="col-lg-5  col-md-8  col-sm-12 mx-auto">
-<div class="login_logo login_border_radius1">
-<h3 class="text-center" style="margin: 0;padding:20px;">
-<span class="text-white"> 
-Log In</span>
-</h3>
-</div>
+  <div class="login_logo login_border_radius1">
+    <h3 class="text-center" style="margin: 0; padding: 20px;">
+      <span class="text-white "> 
+        S.A.R.B
+      </span>
+    </h3>
+  </div>
 <div class="bg-white login_content login_border_radius">
 
 <form action="<?php echo URLROOT.'homes/index' ?>" id="login_validator" method="post" class="login_validator bv-form" novalidate="novalidate"><button type="submit" class="bv-hidden-submit" style="display: none; width: 0px; height: 0px;"></button>
@@ -34,7 +35,7 @@ Log In</span>
 <label for="email" class="col-form-label"> E-mail</label>
 <div class="input-group">
 <span class="input-group-addon input_email"><i class="fa fa-envelope text-primary"></i></span>
-<input type="text" class="form-control  form-control-md <?php echo empty($data['email_err']) ? '' : 'err'?>" value="<?php echo empty($data['email_err']) ? $data['email'] : '';?>" type="email" placeholder="email" name="email"" id="email" name="username" placeholder="E-mail" data-bv-field="username">
+<input type="text" class="form-control  form-control-md <?php echo empty($data['email_err']) ? '' : 'err'?>" value="<?php echo empty($data['email_err']) ? $data['email'] : '';?>" type="email" placeholder="..@example.com" name="email"" id="email" name="username" placeholder="E-mail" data-bv-field="username">
 </div>
 <p class="form_err"><?php echo empty($data['email_err']) ? '' : '<i class="fa fa-exclamation-circle" style="color:red;font-size:17px;"></i>  '.$data['email_err']?></p>
 
@@ -43,7 +44,7 @@ Log In</span>
 <label for="password" class="col-form-label">Password</label>
 <div class="input-group">
 <span class="input-group-addon addon_password"><i class="fa fa-lock text-primary"></i></span>
-<input type="password" class="form-control form-control-md <?php echo empty($data['password_err']) ? '' : 'err'?>" id="password" name="password" placeholder="Password" data-bv-field="password">
+<input type="password" class="form-control form-control-md <?php echo empty($data['password_err']) ? '' : 'err'?>" id="password" name="password" placeholder="%.6.d.H" data-bv-field="password">
 </div>
 <p class="form_err"><?php echo empty($data['password_err']) ? '' : '<i class="fa fa-exclamation-circle" style="color:red;font-size:17px;"></i>  '.$data['password_err']?></p>
 <div class="form-group">

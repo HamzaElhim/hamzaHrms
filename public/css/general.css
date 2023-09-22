@@ -205,3 +205,8 @@ html {
 .hiden {
   display: none;
 }
+
+.fixe:hover{
+  text-decoration: none !important;
+  color: #9799ab !important;
+}

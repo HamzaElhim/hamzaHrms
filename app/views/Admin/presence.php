@@ -10,9 +10,9 @@
           <table class="mainData">
                <th >
                   <tr class="th">
-                    <td>Id </td>
+                    <td class="cntr">ID </td>
                     <td>Employees</td>
-                    <td >Status</td>
+                    <td class="cntr">Status</td>
                   </tr>
                </th>
                 <tbody class="tbody">
@@ -21,14 +21,14 @@
                     foreach ($data['employeesPr'] as $key => $value) {
                     ?>
                         <tr>
-                            <td><?= $id++ ?></td>
+                            <td class="cntr"><?= $id++ ?></td>
                             <td><?= $value['empName'] ?></td>
                             <?php  
             
                             if ($value['presentDay'] == 1) {
-                                echo "<td class='Present'>". "Present" . "</td>";
+                                echo "<td class='cntr Present'>". "Present" . "</td>";
                             } else {
-                                echo "<td class='Absent'>". "Absent" . "</td>";
+                                echo "<td class='cntr Absent'>". "Absent" . "</td>";
                             }
                             ?>
                         </tr>                  
@@ -46,10 +46,10 @@
           <table class="mainData">
                <th>
                   <tr class="th">
-                    <td>Id </td>
+                    <td class="cntr">ID </td>
                     <td>Employees</td>
-                    <td class="text-green">Presences</td>
-                    <td class="text-red">Absences</td>
+                    <td class="cntr text-green">Presences</td>
+                    <td class="cntr text-red">Absences</td>
                   </tr>
                </th>
                 <tbody class="tbody">
@@ -58,10 +58,10 @@
                     foreach ($data['employeesPr'] as $key => $value) {
                     ?>
                         <tr>
-                            <td><?= $id++ ?></td>
+                            <td class="cntr"><?= $id++ ?></td>
                             <td><?= $value['empName'] ?></td>
-                            <td><?= $value['Presences'] ?></td>
-                            <td><?= $value['Absences'] ?></td>
+                            <td class="cntr"><?= $value['Presences'] ?></td>
+                            <td class="cntr" ><?= $value['Absences'] ?></td>
                         </tr>                  
                     <?php
                     } 
@@ -73,5 +73,6 @@
         
       </main>
      
+
       <link rel="stylesheet" href="<?PHP echo URLROOT.'css/admin/presence.css';?>">
 <?php require_once APPROOT.'views/inc/footer.php';; ?>

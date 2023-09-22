@@ -7,7 +7,7 @@
               some msg 
         <h1></h1>
         <a class="header-right" href="<?PHP echo URLROOT.'users/logout';?>">
-          <span class="material-icons-outlined">account_circle</span>
+          <span class="material-icons-outlined">logout</span>
 
         </a>
       </header>

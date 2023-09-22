@@ -11,7 +11,7 @@
         <div class="main-cards">
     
     
-          <a href ="../Presence/Presence.html"  class="card">
+          <a href ="#"  class="card">
             <div class="card-inner">
               <p class="text-primary">Presents</p>
               <span class="material-symbols-outlined text-green">how_to_reg</span>
@@ -19,14 +19,14 @@
             <span class="text-primary font-weight-bold"><?PHP echo $data['attendance']->present;; ?> </span>
           </a>
 
-          <a href ="../Presence/Presence.html" class="card">
+          <a href ="#" class="card">
             <div class="card-inner">
               <p class="text-primary">Absents</p>
               <span class="material-symbols-outlined text-red">unpublished</span>
             </div>
             <span class="text-primary font-weight-bold"><?PHP echo $data['attendance']->absnt ?></span>
           </a>
-          <a href ="../Requests/Requests.html" class="card">
+          <a href ="<?PHP echo URLROOT.'Requests/RequestUser';?>" class="card">
             <div class="card-inner">
               <p class="text-primary">Requests</p>
               <span class="material-symbols-outlined text-blue1">notification_add</span>
@@ -40,7 +40,7 @@
             </div>
             <span class="text-primary font-weight-bold">/79</span>
           </a>
-          <a href ="../Events/Events.html" class="card">
+          <a href ="<?PHP echo URLROOT.'events/upcoming'; ?>" class="card">
             <div class="card-inner">
               <p class="text-primary">Events</p>
               <span class="material-symbols-outlined text-red1">today</span>
