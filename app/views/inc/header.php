@@ -17,8 +17,8 @@
 <script defer src="<?PHP echo URLROOT.'sidbar.js'; ?>"></script>
 
   <link rel="stylesheet" href="<?php echo URLROOT.'css/navigation.css';?>">
-  <link rel="stylesheet" href="<?php echo URLROOT.'css/general.css';?>">
   <link rel="stylesheet" href="<?PHP echo URLROOT.'css/dashboard.css'; ?>">
+  <link rel="stylesheet" href="<?php echo URLROOT.'css/general.css';?>">
 </head>
 <body>
   

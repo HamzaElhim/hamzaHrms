@@ -21,7 +21,8 @@
         'employees'=>$this->adminModel->getUsers() ,
         'presents'=>$this->adminModel->getPrs() ,
         'requests'=> $this->adminModel->getReqts(), 
-        'absents' => $this->adminModel->getAbs()
+        'absents' => $this->adminModel->getAbs(),
+        'total_evn'=>$this->getModel->count_evn(),
       ];
       $this->views('admin/index',$data);
     }

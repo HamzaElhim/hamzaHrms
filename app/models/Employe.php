@@ -136,5 +136,22 @@
           
         }
 
+        public function count_evn($dept=''){
+          $blanc=empty($dept) ? '' : ' AND (branch LIKE "ALL" OR branch LIKE '.$dept.')';
+          $sql='SELECT * FROM events 
+          where  date >= CURRENT_DATE
+           AND (date > CURRENT_DATE 
+           OR time>= CURRENT_TIME) 
+          '.$blanc.'';
+    
+          $this->db->query($sql);
+          $this->db->execute();
+          
+    
+          return $this->db->rowCount() >0 ? $this->db->rowCount() : false;
+          
+    
+      }
+
       
     }

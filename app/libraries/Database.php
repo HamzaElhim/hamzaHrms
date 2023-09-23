@@ -82,6 +82,7 @@
     return $this->stmt->rowCount();
   }
 
+  
   public function fetchColumn(){
     $this->stmt->execute();
     return $this->stmt->fetchColumn();

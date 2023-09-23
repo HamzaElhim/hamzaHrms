@@ -55,5 +55,11 @@
       $this->db->query($sql);
       $this->db->bind(':id',$id);
       return $this->db->singeResult();
+
+
     }
+
+ 
+
+
   }
