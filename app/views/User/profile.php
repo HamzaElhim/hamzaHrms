@@ -11,10 +11,6 @@
 
 <main class="main-container" >
 
-<pre>
-  <?PHP print_r($data['professional_info'])?>
-</pre>
-  
 
 
 

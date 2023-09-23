@@ -5,8 +5,8 @@
     public $userModel;
     public function __construct()
     {
-      $this->getModel=$this->models('employe');
       $this->userModel=$this->models('user');
+      $this->getModel=$this->models('employe');
       if(!isset($_SESSION['id']))redirect('homes');
     }
 
@@ -23,21 +23,22 @@
 
     public function profile(){
       $id=$_SESSION['id'];
-      $per=$this->getModel->employe_info('personal_info',$id);
-      $pro=$this->getModel->employe_info('professional_info',$id);
-      $mor=$this->getModel->employe_info('employes',$id);
+      $short_cute=$this->getModel->employe_info('employes',$id);
+      $personal=$this->getModel->employe_info('personal_info',$id);
+      $professional=$this->getModel->employe_info('professional_info',$id);
 
-      echo '<pre>';
-      print_r($pro);
-      echo '<pre>';
+      
+ 
+
 
       $data=[
-        'personal_info'=> to_assosiative_arr($per),
-        'professional_info'=> to_assosiative_arr($pro),
-        'more_info'=> to_assosiative_arr($mor),
+        'personal_info'=> to_assosiative_arr($personal),
+        'professional_info'=> to_assosiative_arr($professional),
+        'more_info'=> to_assosiative_arr($short_cute),
       ];
 
-      // $this->views('User/profile',$data);
+
+      $this->views('User/profile',$data);
     }
 
     public function logout(){
