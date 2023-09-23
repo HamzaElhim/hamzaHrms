@@ -8,7 +8,7 @@
               some msg 
         <h1></h1>
         <a class="header-right" href="<?PHP echo URLROOT.'admins/logout';?>">
-          <span class="material-icons-outlined">account_circle</span>
+          <span class="material-icons-outlined">logout</span>
         </a>
       </header>
       <!-- End Header -->
@@ -24,44 +24,44 @@
       
               <ul class="sidebar-list">
                 <li class="sidebar-list-item">
-                  <a href="<?PHP echo URLROOT.'admins'?>" >
+                  <a class="fixe" href="<?PHP echo URLROOT.'admins'?>" >
                     <span class="material-icons-outlined">dashboard</span> Dashboard
                   </a>
                 </li>
                 <li class="sidebar-list-item">
-                  <a href="<?PHP echo URLROOT.'Depart/dashboard';?>" >
+                  <a class="fixe" href="<?PHP echo URLROOT.'Depart/dashboard';?>" >
                     <span class="material-icons-outlined">
                       assured_workload </span> Departments
                   </a>
                 </li>
                 <li class="sidebar-list-item">
-                  <a href="<?PHP echo URLROOT.'admins/employes'?>" >
+                  <a  class="fixe" href="<?PHP echo URLROOT.'admins/employes'?>" >
                     <span class="material-icons-outlined"> face</span> Employees
                   </a>
                 </li>
                 <li class="sidebar-list-item">
-                  <a href="<?PHP echo URLROOT.'Presences/presence';?>" >
+                  <a class="fixe" href="<?PHP echo URLROOT.'Presences/presence';?>" >
                     <span class="material-icons-outlined">view_list  </span> Presence
                   </a>
                 </li>
                 <li class="sidebar-list-item">
-                  <a href="<?PHP echo URLROOT.'admins/salary'?>" >
+                  <a  class="fixe"href="<?PHP echo URLROOT.'admins/salary'?>" >
                     <span class="material-icons-outlined">credit_score</span> salaries
                   </a>
                 </li>
                 <li class="sidebar-list-item">
-                  <a href="<?PHP echo URLROOT.'Requests/Request';?>" >
+                  <a class="fixe" href="<?PHP echo URLROOT.'Requests/Request';?>" >
                     <span class="material-icons-outlined"> note_alt</span> Requests 
                   </a>
                 </li>
                 <li class="sidebar-list-item">
-                <a class="btn-group dropup">
+                <a class="fixe" class="btn-group dropup">
                 <span class="material-icons-outlined"> event </span> 
-                  <a type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <a class="fixe" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Events
                   </a>
                   <div class="dropdown-menu" style="background-color:#21232d">
-                  <a class="dropdown-item" style="color:#FFF !important" href="<?PHP echo URLROOT.'events/add'; ?>">Add </a>
+                    <a class=" fixe dropdown-item" style="color:#FFF !important" href="<?PHP echo URLROOT.'events/add'; ?>">Add </a>
                     <a class="dropdown-item" style="color:#FFF !important" href="<?PHP echo URLROOT.'events/upcoming'; ?>">Upcoming </a>
                     <a class="dropdown-item" style="color:#FFF !important" href="<?PHP echo URLROOT.'events'; ?>">Historical </a>
                   </div>

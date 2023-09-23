@@ -21,7 +21,7 @@
               <th>Department :<?PHP echo $dept->department ?></th>
               <th>&nbsp;</th>
               <th>&nbsp;</th>
-              <th>TOTAL :<?PHP echo $dept->total.' MAD' ?></th>
+              <th>TOTAL :<?PHP echo $dept->total.' DH' ?></th>
             </tr>
             <tr class="tlt">
               <th>First Name</th>
@@ -37,7 +37,7 @@
           <td>    <?PHP echo $empl->first_name ?>   </td>
           <td>    <?PHP echo $empl->last_name ?>   </td>
           <td>    <?PHP echo $empl->role ?>   </td>
-          <td>    <?PHP echo $empl->salary.' MAD'; ?>   </td>
+          <td>    <?PHP echo $empl->salary.' DH'; ?>   </td>
           </tr>
           <?PHP }?>
           </tbody>

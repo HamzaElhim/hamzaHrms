@@ -273,3 +273,8 @@ ul {
 p {
   color: #4d4f57;
 }
+
+.sidebar-list-item > a:hover {
+    text-decoration: none !important;
+    color: #9799ab !important;
+}

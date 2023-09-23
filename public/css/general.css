@@ -205,8 +205,3 @@ html {
 .hiden {
   display: none;
 }
-
-.sidebar-list-item > a {
-  text-decoration: none !important;
-  color: #9799ab !important;
-}
