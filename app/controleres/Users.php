@@ -1,12 +1,14 @@
 <?php
-  
+
+use function PHPSTORM_META\type;
+
    class Users extends Controler {
     public $getModel;
     public $userModel;
     public function __construct()
     {
       $this->userModel=$this->models('user');
-      $this->getModel=$this->models('employe');
+      $this->getModel=$this->models('Employe');
       if(!isset($_SESSION['id']))redirect('homes');
     }
 
@@ -24,13 +26,11 @@
     }
 
     public function profile(){
-      $id=$_SESSION['id'];
-      $short_cute=$this->getModel->employe_info('employes',$id);
-      $personal=$this->getModel->employe_info('personal_info',$id);
-      $professional=$this->getModel->employe_info('professional_info',$id);
 
-      
- 
+      $short_cute=$this->getModel->employe_info('employes',$_SESSION['id']);
+      $personal=$this->getModel->employe_info('personal_info',$_SESSION['id']);
+      $professional=$this->getModel->employe_info('professional_info',$_SESSION['id']);  
+  
 
 
       $data=[

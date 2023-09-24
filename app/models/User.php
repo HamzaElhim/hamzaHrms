@@ -102,10 +102,10 @@
         {
             $this->Database->query('SELECT absnt, present FROM attendance  WHERE employee_id =:user');
             $this->Database->bind(':user', $emp);
-            $User = $this->Database->singeResult();
-            
-            return $User;
+                        
+            return $this->Database->singeResult();
         }
+        
         public function getRequest($emp)
         {
             $this->Database->query("SELECT COUNT(*) as employesPending FROM requests WHERE emp = :emp AND status = 'pending'");

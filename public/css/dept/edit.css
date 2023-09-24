@@ -5,7 +5,7 @@ body {
   background-color: #f5f5f5;
 }
 
-.container {
+.container-e {
   max-width: 400px;
   margin: 0 auto;
   padding: 20px;
@@ -15,18 +15,18 @@ body {
   margin-top: 20px;
 }
 
-.add-department-section h1 {
+.add-department-section-e h1 {
   font-size: 24px;
   margin-bottom: 20px;
   color: #333;
 }
 
-.add-department-form {
+.add-department-form-e {
   display: flex;
   flex-direction: column;
 }
 
-.form-group {
+.form-group-e {
   margin-bottom: 10px;
 }
 
@@ -52,4 +52,35 @@ button {
 
 button:hover {
   background-color: #1c9951;
+}
+
+.main_container {
+  position: relative;
+}
+
+.edit_dept {
+  position: absolute;
+  left: 44%;
+  top: 15%;
+}
+
+.btn-div {
+  display: flex;
+  justify-content: center;
+}
+
+.opacity {
+  opacity: 30%;
+  cursor: pointer;
+}
+
+.icon-div {
+  display: flex;
+  justify-content: end;
+  align-items: start;
+}
+
+.icon {
+  color: red;
+  cursor: pointer;
 }

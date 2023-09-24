@@ -24,4 +24,4 @@
     </div>
 
 <?PHP require_once APPROOT.'views/inc/footer.php';?>
-<link rel="stylesheet" href="<?PHP echo URLROOT.'css/dept/edit';?>">
+<link rel="stylesheet" href="<?PHP echo URLROOT.'css/dept/edit.css';?>">

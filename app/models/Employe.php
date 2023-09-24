@@ -10,14 +10,10 @@
       }
 
       // get the specific info of an employe by the type of the info
-      public function employe_info($table_name='',$id=''){
-        $sql='SELECT * from employes inner join personal_info ON
-         employes.employe_id=personal_info.employe_id inner join 
-         professional_info 
-         ON employes.employe_id=professional_info.employe_id 
-         where employes.employe_id=37';
+      public function employe_info($table_name,$id){
+        $sql='SELECT * from '.$table_name.' WHERE employe_id=:id';
         $this->db->query($sql);
-        // $this->db->bind(':id',$id);
+        $this->db->bind(':id',$id);
         return $this->db->singeResult();
       }
 

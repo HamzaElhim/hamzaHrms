@@ -9,9 +9,6 @@
         </div>
 
         <div class="main-cards">
-          <PRE>
-            <?php print_r($data['attendance']->present) ?>
-          </PRE>
     
     
           <a href ="#"  class="card">

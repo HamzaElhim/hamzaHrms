@@ -89,6 +89,8 @@
           'professional_info'=>$professional,
         ];
         $this->views('admin/add/4',$data);
+
+
     }
 
     // delete a employe

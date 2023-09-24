@@ -36,7 +36,7 @@
         if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['editdpt']))
         {
             $data['id'] = $_POST['dprId'];
-            $this->views('Admin/edit_department', $data);
+            $this->views('Dept/edit_department', $data);
             exit();
 
         }elseif ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['edit'])) {
