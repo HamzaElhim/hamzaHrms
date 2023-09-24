@@ -100,7 +100,7 @@
 
         public function getAttendance($emp)
         {
-            $this->Database->query('SELECT absnt, present FROM attendance  WHERE employee_id = :user');
+            $this->Database->query('SELECT absnt, present FROM attendance  WHERE employee_id =:user');
             $this->Database->bind(':user', $emp);
             $User = $this->Database->singeResult();
             

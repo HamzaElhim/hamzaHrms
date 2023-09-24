@@ -140,8 +140,9 @@
           
         }
 
+
         public function count_evn($dept=''){
-          $blanc=empty($dept) ? '' : ' AND (branch LIKE "ALL" OR branch LIKE '.$dept.')';
+          $blanc=empty($dept) ? '' : ' AND (branch LIKE "ALL" OR branch="'.$dept.'")';
           $sql='SELECT * FROM events 
           where  date >= CURRENT_DATE
            AND (date > CURRENT_DATE 

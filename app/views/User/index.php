@@ -9,6 +9,9 @@
         </div>
 
         <div class="main-cards">
+          <PRE>
+            <?php print_r($data['attendance']->present) ?>
+          </PRE>
     
     
           <a href ="#"  class="card">
@@ -45,7 +48,7 @@
               <p class="text-primary">Events</p>
               <span class="material-symbols-outlined text-red1">today</span>
             </div>
-            <span class="text-primary font-weight-bold">/79</span>
+            <span class="text-primary font-weight-bold"><?PHP echo $data['total_evn']?></span>
           </a>
         </div>
      </main>

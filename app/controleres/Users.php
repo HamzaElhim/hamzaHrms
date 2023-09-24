@@ -12,10 +12,12 @@
 
     public function index(){
       $user=$this->getModel->employe_info('employes',$_SESSION['id']);
+      $attendance=$this->userModel->getAttendance($_SESSION['id']);
       $data=[
         'user'=>$user,
-        'attendance'=>$this->userModel->getAttendance($_SESSION['id']) ,
+        'attendance'=>$attendance ,
         'NbrRequest'=>$this->userModel->getRequest($_SESSION['id']) ,
+        'total_evn'=>$this->getModel->count_evn($_SESSION['dept']),
       ];
 
       $this->views('user/index',$data);
