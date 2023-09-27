@@ -35,7 +35,7 @@
       </a>
     </li>
     <li class="sidebar-list-item">
-      <a href="<?PHP echo URLROOT.'Requests/Request' ;?>
+      <a href="<?PHP echo URLROOT.'Requests/Request';?>">
         <span class="material-icons-outlined"> note_alt</span> Requests 
       </a>
     </li>

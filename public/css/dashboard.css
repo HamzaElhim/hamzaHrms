@@ -73,6 +73,8 @@ body {
 
 .header-right {
   color: #666666;
+  position: absolute;
+  right: 20px;
 }
 
 .menu-icon {

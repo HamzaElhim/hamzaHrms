@@ -5,8 +5,6 @@
         <div class="menu-icon" onclick="openSidebar()">
           <span class="material-icons-outlined">menu</span>
         </div>
-              some msg 
-        <h1></h1>
         <a class="header-right" href="<?PHP echo URLROOT.'admins/logout';?>">
           <span class="material-icons-outlined">logout</span>
         </a>
@@ -72,6 +70,10 @@
             </aside>
 
            <style>
+            .header-right {
+              position: absolute;
+              right: 20px;
+            }
             .dropdown-item:hover{
               background-color: #ff8080 !important;
             }

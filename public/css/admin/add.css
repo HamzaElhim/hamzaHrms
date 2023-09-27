@@ -85,6 +85,7 @@ span {
   row-gap: 0.4rem;
 }
 
+
 .info_ctr {
   font-size: 2.4rem;
 }
@@ -165,6 +166,7 @@ span {
   outline: none !important;
   cursor: pointer;
 }
+
 @media (min-width: 500px) {
   .multisteps-form__progress-btn {
     text-indent: 0;
