@@ -40,6 +40,12 @@
         
         return $count;
     }
+    public function getSalaries(){
+        $this->Database->query('SELECT SUM(currentSalary) AS Salaries FROM professional_info ');
+        $totalSalaries = $this->Database->singeResult(); 
+        
+        return $totalSalaries->Salaries;
+    }
     public function getReqts()
     {
         $this->Database->query(" SELECT COUNT(*) FROM requests Where status = 'pending' ");

@@ -14,10 +14,16 @@ use function PHPSTORM_META\type;
 
     public function index(){
       $user=$this->getModel->employe_info('employes',$_SESSION['id']);
+      $Salary=$this->getModel->employe_info('professional_info',$_SESSION['id']);
       $attendance=$this->userModel->getAttendance($_SESSION['id']);
+      $SalaryAm = $attendance->absnt * ($Salary->salary * 0.033);
+      $salaryCurrent = $Salary->salary - intval($SalaryAm) ;
+      $this->getModel->UpdateSalaryCurrent($_SESSION['id'], $salaryCurrent);
+
       $data=[
-        'user'=>$user,
+        'user'=>$user->first_name . " " . $user->last_name,
         'attendance'=>$attendance ,
+        'Salary' => $salaryCurrent ,
         'NbrRequest'=>$this->userModel->getRequest($_SESSION['id']) ,
         'total_evn'=>$this->getModel->count_evn($_SESSION['dept']),
       ];

@@ -7,7 +7,7 @@
           <p class="font-weight-bold">DASHBOARD</p>
           
         </div>
-
+<?php echo $data['user'] ?>
         <div class="main-cards">
     
     
@@ -38,7 +38,7 @@
               <p class="text-primary">Salaries</p>
               <span class="material-symbols-outlined text-green1">payments</span>
             </div>
-            <span class="text-primary font-weight-bold">/79</span>
+            <span class="text-primary font-weight-bold"><?PHP echo $data['Salary']?></span>
           </a>
           <a href ="<?PHP echo URLROOT.'events/upcoming'; ?>" class="card">
             <div class="card-inner">

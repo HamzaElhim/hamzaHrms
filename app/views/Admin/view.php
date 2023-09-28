@@ -15,7 +15,6 @@
   
 
 
-
         <div class="col-12 col-lg-9 ml-auto mr-auto mb-4 sld_top">
             <div class="multisteps-form__progress">
               <butaton

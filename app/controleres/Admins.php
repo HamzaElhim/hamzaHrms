@@ -19,6 +19,7 @@
         'admin'=>$admin,
         'departments'=>$this->adminModel->getdept() ,
         'employees'=>$this->adminModel->getUsers() ,
+        'salaries'=>$this->adminModel->getSalaries() ,
         'presents'=>$this->adminModel->getPrs() ,
         'requests'=> $this->adminModel->getReqts(), 
         'absents' => $this->adminModel->getAbs(),

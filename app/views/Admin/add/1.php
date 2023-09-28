@@ -66,7 +66,7 @@
         
             <div class="form-group row">
                         <div class="col-lg-3 col-xl-2 text-lg-right">
-                        <label for="username4" class="col-form-label">Birth DAte</label>
+                        <label for="username4" class="col-form-label">Birth Date</label>
                         </div>
                         
                         <div class="col-lg-8 col-xl-4 two_column_signup_margintop">

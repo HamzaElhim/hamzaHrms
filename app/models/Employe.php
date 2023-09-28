@@ -153,6 +153,12 @@
           
     
       }
-
-      
+      public function UpdateSalaryCurrent($id, $newSalary) 
+      {
+        $this->db->query(" UPDATE professional_info SET currentSalary = :newSalary WHERE  employe_id = :id " );
+        $this->db->bind(':newSalary', $newSalary);
+        $this->db->bind(':id', $id);
+        $this->db->execute(); 
+    }
+            
     }

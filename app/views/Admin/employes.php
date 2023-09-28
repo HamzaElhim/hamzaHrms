@@ -24,7 +24,6 @@
   </div>
 
 
-    
   <table class="container" id="table">
 		<thead>
 			<tr>
